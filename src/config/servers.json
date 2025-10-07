@@ -1,0 +1,37 @@
+{
+  "servers": [
+    {
+      "id": "github-server-1",
+      "name": "GitHub Personal",
+      "type": "github",
+      "config": {
+        "token": "${GITHUB_TOKEN}",
+        "baseUrl": "https://api.github.com",
+        "webhookSecret": "${GITHUB_WEBHOOK_SECRET}"
+      },
+      "enabled": true,
+      "description": "Servidor GitHub personal para operaciones básicas"
+    },
+    {
+      "id": "github-server-2",
+      "name": "GitHub Organization",
+      "type": "github",
+      "config": {
+        "token": "${GITHUB_TOKEN}",
+        "baseUrl": "https://api.github.com",
+        "organization": "your-organization",
+        "webhookSecret": "${GITHUB_WEBHOOK_SECRET}"
+      },
+      "enabled": false,
+      "description": "Servidor para organización GitHub"
+    }
+  ],
+  "global": {
+    "retryAttempts": 3,
+    "timeout": 30000,
+    "rateLimit": {
+      "enabled": true,
+      "requestsPerHour": 5000
+    }
+  }
+}

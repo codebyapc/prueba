@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP GitHub Server - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🚀 MCP GitHub Server Dashboard</h1>
+            <div class="status-indicator" id="serverStatus">
+                <span class="status-dot"></span>
+                <span class="status-text">Conectando...</span>
+            </div>
+        </header>
+
+        <div class="dashboard-grid">
+            <!-- Estadísticas Generales -->
+            <div class="card">
+                <h3>📊 Estadísticas Generales</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-label">Tiempo activo</div>
+                        <div class="stat-value" id="uptime">0s</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Peticiones totales</div>
+                        <div class="stat-value" id="totalRequests">0</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Conexiones activas</div>
+                        <div class="stat-value" id="activeConnections">0</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Estado del servidor</div>
+                        <div class="stat-value" id="serverHealth">Desconocido</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Estado de Servidores -->
+            <div class="card">
+                <h3>🔗 Estado de Servidores</h3>
+                <div class="servers-list" id="serversList">
+                    <div class="server-item">
+                        <div class="server-info">
+                            <div class="server-name">Cargando...</div>
+                            <div class="server-type">Cargando...</div>
+                        </div>
+                        <div class="server-status">
+                            <span class="status-dot"></span>
+                            <span class="status-text">Cargando...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actividad Reciente -->
+            <div class="card">
+                <h3>📋 Actividad Reciente</h3>
+                <div class="activity-list" id="activityList">
+                    <div class="activity-item">
+                        <div class="activity-time">Cargando...</div>
+                        <div class="activity-message">Cargando actividad...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logs del Sistema -->
+            <div class="card">
+                <h3>📜 Logs del Sistema</h3>
+                <div class="logs-container">
+                    <div class="logs-header">
+                        <button onclick="clearLogs()" class="btn-secondary">Limpiar</button>
+                        <button onclick="toggleAutoRefresh()" class="btn-secondary" id="autoRefreshBtn">
+                            Auto-refresh: ON
+                        </button>
+                    </div>
+                    <div class="logs-list" id="logsList">
+                        <div class="log-item">
+                            <div class="log-time">Cargando...</div>
+                            <div class="log-level">INFO</div>
+                            <div class="log-message">Cargando logs...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gráfico de Actividad -->
+        <div class="card">
+            <h3>📈 Actividad por Hora</h3>
+            <canvas id="activityChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
