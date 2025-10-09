@@ -89,14 +89,16 @@ Cada funcionalidad tiene su propia rama siguiendo el patrón `feature/nombre-fun
 - `GET /api/bookings` - Listar reservas
 - `POST /api/bookings` - Crear reserva
 - `PUT /api/bookings/:id` - Actualizar reserva
+- `PUT /api/bookings/:id/reschedule` - Reagendar reserva
 - `DELETE /api/bookings/:id` - Cancelar reserva
 
 ## Estados de Desarrollo
 
 - ✅ Ramas creadas en GitHub
 - ✅ Estructura base del proyecto configurada
+- ✅ Funcionalidad de reagendado implementada
 - 🔄 Sincronización con Linear (pendiente)
-- ⏳ Implementación de funcionalidades
+- ⏳ Implementación de funcionalidades adicionales
 
 ## Tecnologías Utilizadas
 
