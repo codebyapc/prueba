@@ -79,26 +79,50 @@ Cada funcionalidad tiene su propia rama siguiendo el patrón `feature/nombre-fun
 
 ## API Endpoints
 
+### Centros
+- `GET /api/centers` - Listar centros
+- `GET /api/centers/:id` - Obtener centro específico
+- `POST /api/centers` - Crear centro
+- `PUT /api/centers/:id` - Actualizar centro
+- `DELETE /api/centers/:id` - Eliminar centro
+
 ### Salas
 - `GET /api/rooms` - Listar salas
+- `GET /api/rooms/:id` - Obtener sala específica
 - `POST /api/rooms` - Crear sala
 - `PUT /api/rooms/:id` - Actualizar sala
 - `DELETE /api/rooms/:id` - Eliminar sala
 
 ### Reservas
 - `GET /api/bookings` - Listar reservas
+- `GET /api/bookings/:id` - Obtener reserva específica
 - `POST /api/bookings` - Crear reserva
 - `PUT /api/bookings/:id` - Actualizar reserva
 - `PUT /api/bookings/:id/reschedule` - Reagendar reserva
+- `PUT /api/bookings/:id/approve` - Aprobar/rechazar reserva
 - `DELETE /api/bookings/:id` - Cancelar reserva
+
+### Notificaciones
+- `GET /api/notifications` - Listar notificaciones
+- `GET /api/notifications/:id` - Obtener notificación específica
+- `POST /api/notifications` - Crear notificación
+- `PUT /api/notifications/:id` - Actualizar notificación
+- `POST /api/notifications/:id/resend` - Reenviar notificación
+- `DELETE /api/notifications/:id` - Eliminar notificación
 
 ## Estados de Desarrollo
 
 - ✅ Ramas creadas en GitHub
 - ✅ Estructura base del proyecto configurada
 - ✅ Funcionalidad de reagendado implementada
+- ✅ Gestión completa de salas (CRUD)
+- ✅ Gestión completa de centros (CRUD)
+- ✅ Sistema completo de reservas
+- ✅ Sistema de autorización de reservas
+- ✅ Sistema de notificaciones automático
+- ✅ Tests comprehensivos para todas las funcionalidades
 - 🔄 Sincronización con Linear (pendiente)
-- ⏳ Implementación de funcionalidades adicionales
+- ⏳ Implementación del frontend React
 
 ## Tecnologías Utilizadas
 

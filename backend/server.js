@@ -5,6 +5,7 @@ const morgan = require('morgan');
 
 // Importar rutas
 const roomRoutes = require('./routes/rooms');
+const centerRoutes = require('./routes/centers');
 const bookingRoutes = require('./routes/bookings');
 const notificationRoutes = require('./routes/notifications');
 
@@ -38,6 +39,7 @@ app.get('/', (req, res) => {
 
 // Rutas de la API
 app.use('/api/rooms', roomRoutes);
+app.use('/api/centers', centerRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/notifications', notificationRoutes);
 
